@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule</title>
+    <title>Teams</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,17 +18,74 @@
             <li><a href="Contact.html">Contact</a></li>
         </ul>
     </nav>
-    <nav>
-        <ul>
-            <li><a href="Group A.html">Group A</a></li>
-            <li><a href="Group B.html">Group B</a></li>
-        </ul>
-    </nav>
-    <main style="padding: 20px; text-align: center; color: hsl(0, 0%, 100%)">
-        <p>I will work on this page as soon as I'm free again :)
-            <br>
-            Wish me luck!
-        </p>
-    </main>
+    <div id="matches-tab" class="tab-content" style="display: block;">
+        <h3>Matches</h3>
+        <table class="league-table">
+            <thead>
+                <tr>
+                    <th>Round</th>
+                    <th>Group</th>
+                    <th>Team 1</th>
+                    <th>Score 1</th>
+                    <th>Score 2</th>
+                    <th>Team 2</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="groupA-tab" class="tab-content" style="display: none;">
+        <h3>Group A Standings</h3>
+        <table class="league-table">
+            <thead>
+                <tr>
+                    <th>Rank</th><th>Team</th><th>P</th><th>Pts</th><th>W</th><th>D</th><th>L</th><th>+</th><th>-</th><th>=</th>
+                </tr>
+            </thead>
+            <tbody id="table-body-a">
+<tr><td>1</td><td>انس الغامدي</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>شادي محرزي</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>4</td><td>4</td><td>0</td></tr>
+<tr><td>3</td><td>سلطان القرني</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>4</td><td>4</td><td>0</td></tr>
+<tr><td>4</td><td>محمد الشلوي</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>5</td><td>رمضان العمري</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>6</td><td>شاكر الشمراني</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>-1</td></tr>
+</tbody>
+        </table>
+    </div>
+
+    <div id="groupB-tab" class="tab-content" style="display: none;">
+        <h3>Group B Standings</h3>
+        <table class="league-table">
+            <thead>
+                <tr>
+                    <th>Rank</th><th>Team</th><th>P</th><th>Pts</th><th>W</th><th>D</th><th>L</th><th>+</th><th>-</th><th>=</th>
+                </tr>
+            </thead>
+            <tbody id="table-body-b">
+<tr><td>1</td><td>عبدالرحمن السلمي</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>5</td><td>2</td><td>3</td></tr>
+<tr><td>2</td><td>عماد الزهراني</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>3</td><td>فهد السهلي</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>4</td><td>احمد كش</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>5</td><td>حامد درويش</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>6</td><td>ماجد الجنيدي</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>5</td><td>-3</td></tr>
+</tbody>
+        </table>
+    </div>
+
+    <script>
+        function openTab(evt, tabId) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabId).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>

@@ -1,36 +1,140 @@
+/* 1. التنسيق العام للجسم والخطوط */
 body {
     margin: 0px;
     font-family: Arial, sans-serif;
     background-color: hsl(240, 4%, 11%);
+    color: hsl(240, 1%, 80%);
+    direction: ltr; /* توحيد الاتجاه من اليسار لليمين لكل الموقع */
 }
 
 main {
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 20px;
+    text-align: center;
 }
 
-h1 {
+h1, h2, h3 {
     text-align: center;
     color: hsl(240, 1%, 80%);
     margin-top: 20px;
 }
-.navbar ul{
+
+/* 2. القائمة العلوية الرئيسية (Navbar) */
+.navbar ul {
+    list-style: none;
     text-align: center;
     background-color: hsl(240, 1%, 30%);
     padding: 0px;
     margin: 0px;
+    display: flex;
+    justify-content: center;
 }
-.navbar ul li{
-    display: inline-block;
-    padding: 10px;
-}
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
     color: white;
-    padding: 15px;
+    padding: 15px 20px;
     display: block;
-    text-align: center;
+    transition: 0.3s;
 }
-.navbar ul li a:hover{
+
+.navbar ul li a:hover {
     color: hsl(240, 1%, 80%);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* خاصية الصفحة النشطة للـ Navbar الرئيسي */
+.navbar ul li a.active {
+    background-color: hsl(282, 18%, 33%);
+    font-weight: bold;
+}
+
+/* 3. الخط الفاصل */
+.main-line {
+    width: 100%;
+    height: 2px;
+    background-color: hsl(120, 3%, 59%);
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* 4. قائمة اختيار المجموعات (Navbar2) */
+.navbar2 ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(240, 1%, 30%);
+    gap: 10px;
+    padding: 10px;
+    margin: 0;
+}
+
+.navbar2 ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    display: block;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar2 ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* خاصية المجموعة النشطة (Group A or B) */
+.navbar2 ul li a.active {
+    background-color: hsl(282, 18%, 33%);
+    color: white;
+}
+
+/* 5. تنسيق الجدول الاحترافي */
+.tab-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.league-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: center;
+    direction: ltr; /* الجدول يتبع نظام اليسار لليمين */
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: #1e1e1e;
+}
+
+.league-table thead tr {
+    background-color: hsl(282, 18%, 33%);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.league-table th, .league-table td {
+    padding: 12px 15px;
+}
+
+.league-table td {
+    border-bottom: 1px solid #2e2d2d;
+    color: hsl(240, 1%, 80%);
+}
+
+/* تلوين الصفوف المتبادلة */
+.league-table tbody tr:nth-of-type(even) {
+    background-color: #2a2a2a;
+}
+
+.league-table tbody tr:hover {
+    background-color: #333;
+    transition: 0.2s;
+}
+
+/* تمييز المركز الأول */
+.league-table tbody tr:first-child td {
+    color: #f1c40f; /* لون ذهبي للمركز الأول */
+    font-weight: bold;
 }
