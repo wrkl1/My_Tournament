@@ -55,7 +55,7 @@ def full_update():
     # --- تجهيز جدول المباريات (Matches Tab) ---
     all_matches_html = ""
     for _, r in matches_df.iterrows():
-        round_val = r['Round'] if pd.notna(r['Round']) else "-"
+        round_val = int(r['Round']) if pd.notna(r['Round']) else "-"
         group_val = r['Group'] if pd.notna(r['Group']) else "-"
         t1, t2 = r['Team 1'], r['Team 2']
         g1, g2 = r['Goals 1'], r['Goals 2']

@@ -134,7 +134,9 @@ h1, h2, h3 {
 }
 
 /* تمييز المركز الأول */
-.league-table tbody tr:first-child td {
-    color: #f1c40f; /* لون ذهبي للمركز الأول */
+/* التلوين الذهبي يطبق فقط في جداول المجموعات وليس المباريات */
+#table-body-a tr:first-child td, 
+#table-body-b tr:first-child td {
+    color: #f1c40f; 
     font-weight: bold;
 }

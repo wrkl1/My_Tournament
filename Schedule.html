@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teams</title>
+    <title>Schedule & Standings</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,11 +13,22 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="Teams.html">Teams</a></li>
-            <li><a href="Schedule.html">Schedule</a></li>
+            <li><a href="Schedule.html" class="active">Schedule</a></li>
             <li><a href="Contributors.html">Contributors</a></li>
             <li><a href="Contact.html">Contact</a></li>
         </ul>
     </nav>
+
+    <div class="main-line"><div></div></div>
+
+    <nav class="navbar2">
+        <ul>
+            <li><a href="javascript:void(0)" class="tab-link active" onclick="openTab(event, 'matches-tab')">Matches</a></li>
+            <li><a href="javascript:void(0)" class="tab-link" onclick="openTab(event, 'groupA-tab')">Group A</a></li>
+            <li><a href="javascript:void(0)" class="tab-link" onclick="openTab(event, 'groupB-tab')">Group B</a></li>
+        </ul>
+    </nav>
+
     <div id="matches-tab" class="tab-content" style="display: block;">
         <h3>Matches</h3>
         <table class="league-table">
@@ -31,6 +42,278 @@
                     <th>Team 2</th>
                 </tr>
             </thead>
+            <tbody id="matches-body">
+
+        <tr>
+            <td>1</td>
+            <td>A</td>
+            <td>شاكر الشمراني</td>
+            <td style='color:#f1c40f; font-weight:bold;'>1</td>
+            <td style='color:#f1c40f; font-weight:bold;'>0</td>
+            <td>انس الغامدي</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>B</td>
+            <td>ماجد الجنيدي</td>
+            <td style='color:#f1c40f; font-weight:bold;'>1</td>
+            <td style='color:#f1c40f; font-weight:bold;'>0</td>
+            <td>عبدالرحمن السلمي</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>A</td>
+            <td>سلطان القرني</td>
+            <td style='color:#f1c40f; font-weight:bold;'>1</td>
+            <td style='color:#f1c40f; font-weight:bold;'>0</td>
+            <td>شادي محرزي</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>B</td>
+            <td>عماد الزهراني</td>
+            <td style='color:#f1c40f; font-weight:bold;'>0</td>
+            <td style='color:#f1c40f; font-weight:bold;'>1</td>
+            <td>احمد كش</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>A</td>
+            <td>رمضان العمري</td>
+            <td >-</td>
+            <td >-</td>
+            <td>محمد الشلوي</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>B</td>
+            <td>حامد درويش</td>
+            <td >-</td>
+            <td >-</td>
+            <td>فهد السهلي</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>A</td>
+            <td>شاكر الشمراني</td>
+            <td >-</td>
+            <td >-</td>
+            <td>شادي محرزي</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>B</td>
+            <td>ماجد الجنيدي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>احمد كش</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>A</td>
+            <td>انس الغامدي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>محمد الشلوي</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>B</td>
+            <td>عماد الزهراني</td>
+            <td >-</td>
+            <td >-</td>
+            <td>حامد درويش</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>A</td>
+            <td>سلطان القرني</td>
+            <td >-</td>
+            <td >-</td>
+            <td>رمضان العمري</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>B</td>
+            <td>عبدالرحمن السلمي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>فهد السهلي</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>A</td>
+            <td>شاكر الشمراني</td>
+            <td >-</td>
+            <td >-</td>
+            <td>محمد الشلوي</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>B</td>
+            <td>احمد كش</td>
+            <td >-</td>
+            <td >-</td>
+            <td>حامد درويش</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>A</td>
+            <td>شادي محرزي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>رمضان العمري</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>B</td>
+            <td>عبدالرحمن السلمي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>عماد الزهراني</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>A</td>
+            <td>انس الغامدي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>سلطان القرني</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>B</td>
+            <td>ماجد الجنيدي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>فهد السهلي</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>A</td>
+            <td>شاكر الشمراني</td>
+            <td >-</td>
+            <td >-</td>
+            <td>رمضان العمري</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>B</td>
+            <td>ماجد الجنيدي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>حامد درويش</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>A</td>
+            <td>شادي محرزي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>انس الغامدي</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>B</td>
+            <td>فهد السهلي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>عماد الزهراني</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>A</td>
+            <td>محمد الشلوي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>سلطان القرني</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>B</td>
+            <td>احمد كش</td>
+            <td >-</td>
+            <td >-</td>
+            <td>عبدالرحمن السلمي</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>A</td>
+            <td>رمضان العمري</td>
+            <td >-</td>
+            <td >-</td>
+            <td>انس الغامدي</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>B</td>
+            <td>ماجد الجنيدي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>عماد الزهراني</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>A</td>
+            <td>محمد الشلوي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>شادي محرزي</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>B</td>
+            <td>حامد درويش</td>
+            <td >-</td>
+            <td >-</td>
+            <td>عبدالرحمن السلمي</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>A</td>
+            <td>شاكر الشمراني</td>
+            <td >-</td>
+            <td >-</td>
+            <td>سلطان القرني</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>B</td>
+            <td>فهد السهلي</td>
+            <td >-</td>
+            <td >-</td>
+            <td>احمد كش</td>
+        </tr>
+</tbody> 
         </table>
     </div>
 
@@ -43,12 +326,12 @@
                 </tr>
             </thead>
             <tbody id="table-body-a">
-<tr><td>1</td><td>انس الغامدي</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td>1</td></tr>
-<tr><td>2</td><td>شادي محرزي</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>4</td><td>4</td><td>0</td></tr>
-<tr><td>3</td><td>سلطان القرني</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>4</td><td>4</td><td>0</td></tr>
-<tr><td>4</td><td>محمد الشلوي</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>5</td><td>رمضان العمري</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>6</td><td>شاكر الشمراني</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>-1</td></tr>
+<tr><td>1</td><td>شاكر الشمراني</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>2</td><td>سلطان القرني</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>3</td><td>محمد الشلوي</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>4</td><td>رمضان العمري</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>5</td><td>شادي محرزي</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>-1</td></tr>
+<tr><td>6</td><td>انس الغامدي</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>-1</td></tr>
 </tbody>
         </table>
     </div>
@@ -62,12 +345,12 @@
                 </tr>
             </thead>
             <tbody id="table-body-b">
-<tr><td>1</td><td>عبدالرحمن السلمي</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>5</td><td>2</td><td>3</td></tr>
-<tr><td>2</td><td>عماد الزهراني</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>احمد كش</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>2</td><td>ماجد الجنيدي</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
 <tr><td>3</td><td>فهد السهلي</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>4</td><td>احمد كش</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>5</td><td>حامد درويش</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>6</td><td>ماجد الجنيدي</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>5</td><td>-3</td></tr>
+<tr><td>4</td><td>حامد درويش</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>5</td><td>عبدالرحمن السلمي</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>-1</td></tr>
+<tr><td>6</td><td>عماد الزهراني</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>-1</td></tr>
 </tbody>
         </table>
     </div>
