@@ -1,37 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule</title>
+    <title>Teams - دوري الشلوي</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     
     <h1>دوري الشلوي للمحترفين</h1>
+    
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="Teams.html">Teams</a></li>
+            <li><a href="Teams.html" class="active">Teams</a></li>
             <li><a href="Schedule.html">Schedule</a></li>
             <li><a href="Contributors.html">Contributors</a></li>
             <li><a href="Contact.html">Contact</a></li>
         </ul>
     </nav>
+
     <div class="main-line"></div>
-    <nav class="navbar2">
-        <ul>
-            <li><a href="Group A.html">Group A</a></li>
-            <li><a href="Group B.html">Group B</a></li>
-        </ul>
-    </nav>
-    <main style="padding: 20px; text-align: center; color: hsl(0, 0%, 100%)">
-        <p>Choose a group to view its ranking.
-            <br>
-            .اختر مجموعة لعرض ترتيبها
-        </p>
+
+    <main style="padding: 40px 20px; max-width: 1000px; margin: 0 auto;">
+        
+        <section class="teams-section">
+            <h2 style="color: #f1c40f; margin-bottom: 30px; border-bottom: 2px solid #444; padding-bottom: 10px;">League Teams</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left;">
+                
+                <div style="background: #2a2a2a; padding: 20px; border-radius: 10px; border-left: 5px solid #f1c40f;">
+                    <h3 style="margin-top: 0; color: #fff;">Group A</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><strong>•</strong> شاكر الشمراني</li>
+                        <li><strong>•</strong> سلطان القرني</li>
+                        <li><strong>•</strong> محمد الشلوي</li>
+                        <li><strong>•</strong> رمضان العمري</li>
+                        <li><strong>•</strong> شادي محرزي</li>
+                        <li><strong>•</strong> انس الغامدي</li>
+                    </ul>
+                </div>
+
+                <div style="background: #2a2a2a; padding: 20px; border-radius: 10px; border-left: 5px solid #9b59b6;">
+                    <h3 style="margin-top: 0; color: #fff;">Group B</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><strong>•</strong> احمد كش</li>
+                        <li><strong>•</strong> ماجد الجنيدي</li>
+                        <li><strong>•</strong> فهد السهلي</li>
+                        <li><strong>•</strong> حامد درويش</li>
+                        <li><strong>•</strong> عبدالرحمن السلمي</li>
+                        <li><strong>•</strong> عماد الزهراني</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
     </main>
+
 </body>
 </html>
