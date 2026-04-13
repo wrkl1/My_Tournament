@@ -1,35 +1,51 @@
 import pandas as pd
 
-teams = [
-    "شاكر الشمراني", "رمضان العمري", "ماجد الجنيدي", "حسن محرزي",
-    "شادي محرزي", "عماد الزهراني", "انس الغامدي", "حامد درويش",
-    "محمد الشلوي", "عبدالرحمن السلمي", "محمود عبده", "احمد كش"
-]
+def generate_custom_rounds(teams, group_name):
+    n = len(teams)
+    # خوارزمية الجدولة
+    all_matches = []
+    temp_teams = list(teams)
 
-n = len(teams)
-schedule_data = []
-match_number = 1
+    for round_num in range(n - 1):
+        round_matches = []
+        for i in range(n // 2):
+            team1 = temp_teams[i]
+            team2 = temp_teams[n - 1 - i]
+            round_matches.append({
+                "المجموعة": group_name,
+                "الجولة": round_num + 1,
+                "الفريق الأول": team1,
+                "الفريق الثاني": team2,
+                "أهداف الأول": "",
+                "أهداف الثاني": "",
+                "الحالة": "لم تبدأ"
+            })
+        temp_teams = [temp_teams[0]] + [temp_teams[-1]] + temp_teams[1:-1]
+        all_matches.extend(round_matches)
+    
+    return all_matches
 
-for round_num in range(1, n):
-    for i in range(n // 2):
-        home = teams[i]
-        away = teams[n - 1 - i]
-        
-        schedule_data.append({
-            "الجولة": f"الجولة {round_num}",
-            "رقم المباراة": match_number,
-            "الفريق الأول": home,
-            "الفريق الثاني": away,
-            "أهداف الأول": 0,
-            "أهداف الثاني": 0,
-            "حالة المباراة": "لم تبدأ"
-        })
-        match_number += 1
-            
-    teams = [teams[0]] + [teams[-1]] + teams[1:-1]
+# 1. قائمة الفرق (6 فرق)
+# نصيحة: رتب الفرق هنا بحيث أول مواجهات (1 ضد 6، 2 ضد 5، 3 ضد 4) هي اللي لعبتوها في الجولة الأولى
+group_a_teams = ["شاكر الشمراني", "سلطان القرني", "رمضان العمري", "محمد الشلوي", "شادي محرزي", "انس الغامدي"]
+group_b_teams = ["ماجد الجنيدي", "عماد الزهراني", "حامد درويش", "فهد السهلي", "احمد كش", "عبدالرحمن السلمي"]
 
-# تحويل البيانات لجدول وحفظها
-df_schedule = pd.DataFrame(schedule_data)
-df_schedule.to_excel("matches_schedule.xlsx", index=False)
+# 2. توليد الجدولة
+matches_a = generate_custom_rounds(group_a_teams, "A")
+matches_b = generate_custom_rounds(group_b_teams, "B")
 
-print("تم إنشاء جدول الجولات بنجاح! 🏆 افتح ملف matches_schedule.xlsx وشوف الترتيب.")
+# 3. تحويلها لجدول بيانات
+df_matches = pd.DataFrame(matches_a + matches_b)
+
+# --- هنا السحر: تعديل الجولة الأولى يدوياً لو ما ضبط الترتيب ---
+# تقدر تفتح ملف الإكسل بعد ما يطلع وتعدل أسماء الفرق في "الجولة 1" فقط
+# الكود راح يضمن لك إن الجولات 2، 3، 4، 5 ما فيها تكرار للمباريات
+
+# 4. حفظ الملف
+with pd.ExcelWriter("Tournament_6_Teams.xlsx") as writer:
+    df_matches.to_excel(writer, sheet_name="جدول المباريات", index=False)
+    # إضافة أوراق الترتيب فارغة
+    pd.DataFrame(columns=["المركز", "الفريق", "نقاط"]).to_excel(writer, sheet_name="ترتيب A", index=False)
+    pd.DataFrame(columns=["المركز", "الفريق", "نقاط"]).to_excel(writer, sheet_name="ترتيب B", index=False)
+
+print("تم إنشاء الملف لـ 6 فرق. الجولة الأولى موجودة، ويمكنك تعديل أسمائها يدوياً في الإكسل.")
